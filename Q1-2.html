@@ -1,0 +1,53 @@
+
+    <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Toggle Dark/Light Mode for this page</h2>
+<p> dark and light mode</p>
+
+<button id="btn" onclick="myFunction()">Dark Mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+   
+}
+const btn = document.getElementById('btn');
+
+//  button text on click
+btn.addEventListener('click', function handleClick() {
+  const initialText = 'Dark Mode';
+
+  if (btn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
+    btn.textContent = 'Light Mode';
+  } else {
+    btn.textContent = initialText;
+  }
+});
+
+
+
+
+</script>
+
+</body>
+</html>
+
